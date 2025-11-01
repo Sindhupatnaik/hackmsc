@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { HiX, HiArrowRight, HiArrowUp } from "react-icons/hi";
+import { HiX, HiArrowRight, HiArrowUp, HiDocumentText } from "react-icons/hi";
 import { FaGlobe, FaRocket } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
+import "./styles.css";
 
 export default function Home() {
   const [bannerVisible, setBannerVisible] = useState(true);
@@ -38,7 +39,7 @@ export default function Home() {
             My Reports
           </a>
           <a href="#" className="hover:text-[#2563eb] transition-colors">
-            About
+            About Us
           </a>
           <a href="#" className="hover:text-[#2563eb] transition-colors">
             Statistics
@@ -63,13 +64,13 @@ export default function Home() {
               START REPORTING
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Help build a better city together
+              Help Build a Better City
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-              Report infrastructure problems, sanitation issues, broken streetlights, and more. Track your submissions and see real-time updates on resolutions.
+              Report potholes, broken streetlights, water leaks, garbage collection issues, and more. Track your submissions in real-time and see how your city is improving.
             </p>
             <button className="bg-[#2563eb] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#1e40af] transition-colors">
-              Report an Issue
+              Report Now
             </button>
             <div className="flex items-center gap-3 pt-4">
               <div className="flex items-center gap-1">
@@ -77,7 +78,7 @@ export default function Home() {
                   <FaStar key={i} className="text-yellow-400 w-5 h-5 fill-current" />
                 ))}
               </div>
-              <span className="text-gray-700 font-semibold">5.0</span>
+              <span className="text-gray-700 font-semibold">4.8</span>
               <span className="text-gray-600">
                 from 5,000+ <span className="underline">citizens</span>
               </span>
@@ -110,8 +111,8 @@ export default function Home() {
             <div className="bg-[#f5e6d3] rounded-tl-2xl rounded-br-2xl p-6 flex flex-col justify-between relative min-h-[280px]">
               <div></div>
               <div>
-                <div className="text-5xl lg:text-6xl font-bold text-gray-900 mb-2">15K+</div>
-                <div className="text-lg font-semibold text-gray-900">Reports Resolved</div>
+                <div className="text-5xl lg:text-6xl font-bold text-gray-900 mb-2">12K+</div>
+                <div className="text-lg font-semibold text-gray-900">Issues Resolved</div>
               </div>
               <div className="flex justify-end mt-4">
                 <FaGlobe className="w-8 h-8 text-gray-700" />
@@ -142,7 +143,7 @@ export default function Home() {
             {/* Bottom Right - Saving */}
             <div className="bg-[#2563eb] rounded-lg p-6 flex flex-col justify-between min-h-[280px]">
               <div className="flex items-center justify-between mb-4">
-                <div className="text-4xl lg:text-5xl font-bold text-white">2,450</div>
+                <div className="text-4xl lg:text-5xl font-bold text-white">2,850</div>
                 <HiArrowUp className="text-white w-6 h-6" />
               </div>
               <div className="mt-auto">
@@ -159,12 +160,148 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <div className="text-white font-semibold text-right">Issues Fixed This Month</div>
+                <div className="text-white font-semibold text-right">Resolved This Month</div>
               </div>
             </div>
           </div>
         </div>
       </main>
+
+      {/* New Feature Section */}
+      <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="text-sm uppercase tracking-wider text-gray-500 mb-4">ABOUT US</div>
+        </div>
+
+        {/* Hero Text */}
+        <div className="text-center mb-16 max-w-4xl mx-auto">
+          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            One platform for all your{" "}
+            <span className="font-serif italic text-6xl lg:text-7xl font-bold">city</span>{" "}
+            improvements
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Remove all the friction that stands in the way of your community goals.
+          </p>
+        </div>
+
+        {/* Feature Blocks */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Left Block - Track Progress */}
+          <div className="bg-[#2563eb] rounded-tl-3xl rounded-br-3xl p-5 lg:p-8 relative overflow-hidden min-h-[260px] flex flex-col">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              Track Resolution Progress
+            </h3>
+            
+            {/* Bar Chart Visualization */}
+            <div className="flex-grow flex items-end gap-2 mb-4 relative">
+              {/* Bars */}
+              <div className="flex items-end gap-2 flex-grow mb-8">
+                <div className="bg-blue-200 h-10 w-8 rounded-t"></div>
+                <div className="bg-blue-200 h-16 w-8 rounded-t"></div>
+                <div className="bg-blue-200 h-20 w-8 rounded-t"></div>
+                <div className="bg-blue-200 h-24 w-8 rounded-t"></div>
+              </div>
+              
+              {/* Arrow */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                <div className="text-white text-2xl font-bold mb-1">12,000</div>
+                <svg
+                  className="w-8 h-12 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 100 150"
+                >
+                  <path d="M50 10 L10 140 L90 140 Z" stroke="white" strokeWidth="8" fill="white" strokeLinejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Block - Global Reach */}
+          <div className="bg-[#e0f2fe] rounded-tr-3xl rounded-bl-3xl p-5 lg:p-8 relative overflow-hidden min-h-[260px] flex flex-col">
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Report from Anywhere
+            </h3>
+
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="w-64 h-64 border-2 border-blue-600 rounded-full"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-blue-500 rounded-full"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 border-2 border-blue-400 rounded-full"></div>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex-grow flex flex-col justify-between">
+              {/* Top Section - Submission Card */}
+              <div className="flex justify-start mb-2">
+                <div className="bg-white rounded-lg shadow-lg p-2.5 max-w-[160px]">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <HiDocumentText className="text-blue-600 w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-gray-900">25,000</div>
+                      <div className="text-xs text-gray-600">Reports Sent</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1 mt-1.5">
+                    <div className="w-5 h-5 bg-blue-400 rounded-full border-2 border-white"></div>
+                    <div className="w-5 h-5 bg-blue-500 rounded-full border-2 border-white -ml-2"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Center - Globe */}
+              <div className="flex justify-center items-center my-2">
+                <div className="relative">
+                  <FaGlobe className="w-20 h-20 text-blue-600 opacity-80" />
+                  {/* Wireframe effect */}
+                  <svg
+                    className="absolute inset-0 w-20 h-20"
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <circle cx="50" cy="50" r="45" className="text-blue-600" />
+                    <ellipse cx="50" cy="50" rx="45" ry="20" className="text-blue-600" />
+                    <ellipse cx="50" cy="50" rx="20" ry="45" className="text-blue-600" />
+                    <line x1="50" y1="5" x2="50" y2="95" className="text-blue-600" />
+                    <line x1="5" y1="50" x2="95" y2="50" className="text-blue-600" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Bottom Section - Resolution Card */}
+              <div className="flex justify-end">
+                <div className="bg-[#2563eb] rounded-lg shadow-lg p-2.5 max-w-[160px]">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <div className="w-6 h-6 bg-blue-300 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">✓</span>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-white">40,000</div>
+                      <div className="text-xs text-blue-100">Issues Fixed</div>
+                    </div>
+                  </div>
+                  <div className="flex gap-1 mt-1.5">
+                    <div className="w-5 h-5 bg-blue-300 rounded-full border-2 border-blue-500"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Flags at bottom */}
+              <div className="flex justify-end gap-1.5 mt-2">
+                <div className="w-6 h-6 bg-gradient-to-b from-red-600 via-white to-blue-600 rounded-full border-2 border-gray-300"></div>
+                <div className="w-6 h-6 bg-gradient-to-b from-yellow-500 via-red-600 to-black rounded-full border-2 border-gray-300"></div>
+                <div className="w-6 h-6 bg-gradient-to-b from-green-600 via-white to-green-600 rounded-full border-2 border-gray-300"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
