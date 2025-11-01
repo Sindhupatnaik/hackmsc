@@ -12,10 +12,10 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Top Banner */}
       {bannerVisible && (
-        <div className="bg-[#1a5f3f] text-white px-6 py-3 flex items-center justify-between text-sm">
+        <div className="bg-[#2563eb] text-white px-6 py-3 flex items-center justify-between text-sm">
           <div className="flex items-center gap-2">
             <FaRocket className="text-red-400" />
-            <span>Session 2024 • Early-bird registration now open</span>
+            <span>Report city issues 24/7 • Help improve your community</span>
             <HiArrowRight className="ml-2" />
           </div>
           <button
@@ -29,26 +29,26 @@ export default function Home() {
 
       {/* Navigation Bar */}
       <nav className="bg-white px-6 py-4 flex items-center justify-between relative">
-        <div className="text-2xl font-bold text-[#1a5f3f]">Ascone</div>
+        <div className="text-2xl font-bold text-[#2563eb]">Sudhaar</div>
         <div className="hidden md:flex items-center gap-8 text-gray-700 absolute left-1/2 transform -translate-x-1/2">
-          <a href="#" className="hover:text-[#1a5f3f] transition-colors">
-            Features
+          <a href="#" className="hover:text-[#2563eb] transition-colors">
+            Report Issues
           </a>
-          <a href="#" className="hover:text-[#1a5f3f] transition-colors">
-            Accounts
+          <a href="#" className="hover:text-[#2563eb] transition-colors">
+            My Reports
           </a>
-          <a href="#" className="hover:text-[#1a5f3f] transition-colors">
-            Company
+          <a href="#" className="hover:text-[#2563eb] transition-colors">
+            About
           </a>
-          <a href="#" className="hover:text-[#1a5f3f] transition-colors">
-            Insight
+          <a href="#" className="hover:text-[#2563eb] transition-colors">
+            Statistics
           </a>
         </div>
         <div className="flex items-center gap-6 ml-auto">
-          <a href="#" className="text-gray-700 hover:text-[#1a5f3f] transition-colors">
+          <a href="#" className="text-gray-700 hover:text-[#2563eb] transition-colors">
             Login
           </a>
-          <button className="bg-[#1a5f3f] text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-[#155236] transition-colors">
+          <button className="bg-[#2563eb] text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-[#1e40af] transition-colors">
             Sign Up <HiArrowRight />
           </button>
         </div>
@@ -59,21 +59,17 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Section - Hero Content */}
           <div className="space-y-8">
-            <div className="text-[#1a5f3f] text-sm font-semibold uppercase tracking-wide">
-              TRY IT NOW!
+            <div className="text-[#2563eb] text-sm font-semibold uppercase tracking-wide">
+              START REPORTING
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Change the way you use your{" "}
-              <span className="font-serif italic text-6xl lg:text-7xl font-bold">
-                money
-              </span>
+              Help build a better city together
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-              From your everyday spending, to planning for your future with
-              savings and investments, Ascone helps you get more from your money.
+              Report infrastructure problems, sanitation issues, broken streetlights, and more. Track your submissions and see real-time updates on resolutions.
             </p>
-            <button className="bg-[#1a5f3f] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#155236] transition-colors">
-              Get Started Now
+            <button className="bg-[#2563eb] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#1e40af] transition-colors">
+              Report an Issue
             </button>
             <div className="flex items-center gap-3 pt-4">
               <div className="flex items-center gap-1">
@@ -83,7 +79,7 @@ export default function Home() {
               </div>
               <span className="text-gray-700 font-semibold">5.0</span>
               <span className="text-gray-600">
-                from 120+ <span className="underline">reviews</span>
+                from 5,000+ <span className="underline">citizens</span>
               </span>
             </div>
           </div>
@@ -114,8 +110,8 @@ export default function Home() {
             <div className="bg-[#f5e6d3] rounded-tl-2xl rounded-br-2xl p-6 flex flex-col justify-between relative min-h-[280px]">
               <div></div>
               <div>
-                <div className="text-5xl lg:text-6xl font-bold text-gray-900 mb-2">56+</div>
-                <div className="text-lg font-semibold text-gray-900">Currencies</div>
+                <div className="text-5xl lg:text-6xl font-bold text-gray-900 mb-2">15K+</div>
+                <div className="text-lg font-semibold text-gray-900">Reports Resolved</div>
               </div>
               <div className="flex justify-end mt-4">
                 <FaGlobe className="w-8 h-8 text-gray-700" />
@@ -123,20 +119,20 @@ export default function Home() {
             </div>
 
             {/* Bottom Left - Users Active */}
-            <div className="bg-[#e0f2e9] rounded-tl-2xl rounded-br-2xl p-6 flex flex-col relative min-h-[280px]">
+            <div className="bg-[#dbeafe] rounded-tl-2xl rounded-br-2xl p-6 flex flex-col relative min-h-[280px]">
               <div className="absolute top-4 left-4 flex gap-2">
-                <div className="w-3 h-3 bg-[#1a5f3f] rounded-full"></div>
-                <div className="w-3 h-3 bg-[#1a5f3f] rounded-full"></div>
+                <div className="w-3 h-3 bg-[#2563eb] rounded-full"></div>
+                <div className="w-3 h-3 bg-[#2563eb] rounded-full"></div>
               </div>
               <div className="mt-12 flex-grow flex flex-col justify-between">
                 <div className="text-lg font-semibold text-gray-900 mb-6">
-                  Users Active
+                  Active Users
                 </div>
                 <div className="flex items-center -space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full border-2 border-white"></div>
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full border-2 border-white"></div>
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full border-2 border-white"></div>
-                  <div className="w-12 h-12 bg-[#1a5f3f] rounded-full border-2 border-white flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-2 border-white"></div>
+                  <div className="w-12 h-12 bg-[#2563eb] rounded-full border-2 border-white flex items-center justify-center">
                     <HiArrowRight className="text-white w-5 h-5" />
                   </div>
                 </div>
@@ -144,9 +140,9 @@ export default function Home() {
             </div>
 
             {/* Bottom Right - Saving */}
-            <div className="bg-[#1a5f3f] rounded-lg p-6 flex flex-col justify-between min-h-[280px]">
+            <div className="bg-[#2563eb] rounded-lg p-6 flex flex-col justify-between min-h-[280px]">
               <div className="flex items-center justify-between mb-4">
-                <div className="text-4xl lg:text-5xl font-bold text-white">$196,000</div>
+                <div className="text-4xl lg:text-5xl font-bold text-white">2,450</div>
                 <HiArrowUp className="text-white w-6 h-6" />
               </div>
               <div className="mt-auto">
@@ -163,7 +159,7 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <div className="text-white font-semibold text-right">Saving</div>
+                <div className="text-white font-semibold text-right">Issues Fixed This Month</div>
               </div>
             </div>
           </div>
