@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { HiX, HiArrowRight, HiArrowUp, HiDocumentText } from "react-icons/hi";
-import { FaGlobe, FaRocket } from "react-icons/fa";
+import { HiX, HiArrowRight, HiArrowUp, HiDocumentText, HiChartBar, HiUsers, HiPlus } from "react-icons/hi";
+import { FaGlobe, FaRocket, FaCity, FaTools } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import "./styles.css";
 
 export default function Home() {
   const [bannerVisible, setBannerVisible] = useState(true);
+  const [openFaq, setOpenFaq] = useState(1); // Second FAQ is open by default (index 1)
 
   return (
     <div className="min-h-screen bg-white">
@@ -302,6 +303,454 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Our Mission Section */}
+      <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <div className="text-sm uppercase tracking-wider text-gray-500 mb-8">OUR MISSION</div>
+        </div>
+
+        {/* Main Heading and Description */}
+        <div className="mb-12 max-w-4xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Make Your City, Well-maintained
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+            Empower citizens to report infrastructure issues and track real-time resolutions with our transparent, tech-enabled community reporting system.
+          </p>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* Card 1 - Easy Reporting */}
+          <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <HiDocumentText className="w-6 h-6 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Easy Reporting</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Citizens can quickly report issues like potholes, broken lights, water leaks, and sanitation problems through a simple mobile-first interface.
+            </p>
+            <button className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-100 transition-colors group">
+              <HiArrowRight className="w-5 h-5 text-gray-700 group-hover:text-blue-600" />
+            </button>
+          </div>
+
+          {/* Card 2 - Real-time Tracking */}
+          <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <HiChartBar className="w-6 h-6 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Tracking</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Track your submitted reports and receive live updates on status, estimated resolution time, and actions taken by municipal teams.
+            </p>
+            <button className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-100 transition-colors group">
+              <HiArrowRight className="w-5 h-5 text-gray-700 group-hover:text-blue-600" />
+            </button>
+          </div>
+
+          {/* Card 3 - Community Impact */}
+          <div className="bg-[#dbeafe] rounded-2xl p-6 lg:p-8 shadow-sm border border-blue-200 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <HiUsers className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Community Impact</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              See the collective impact of citizen reports. Our dashboard shows resolved issues, improvements made, and how your city is getting better.
+            </p>
+            <button className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center hover:bg-[#1e40af] transition-colors">
+              <HiArrowRight className="w-5 h-5 text-white" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="bg-[#2563eb] py-16 lg:py-24 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1200 200">
+            <path
+              d="M0,100 Q300,50 600,100 T1200,100 L1200,200 L0,200 Z"
+              fill="white"
+            />
+            <path
+              d="M0,150 Q300,100 600,150 T1200,150 L1200,200 L0,200 Z"
+              fill="white"
+              opacity="0.5"
+            />
+          </svg>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="text-sm uppercase tracking-wider text-blue-200 mb-4">IMPACT</div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+              Growing community, building solutions
+            </h2>
+          </div>
+
+          {/* Statistics */}
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Stat 1 */}
+            <div className="text-center">
+              <div className="text-6xl lg:text-7xl font-bold text-white mb-4">15K+</div>
+              <div className="text-xl text-blue-100">Issues Resolved</div>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="text-center">
+              <div className="text-6xl lg:text-7xl font-bold text-white mb-4">8,500+</div>
+              <div className="text-xl text-blue-100">Active Citizens</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left Side - Label and Heading */}
+          <div>
+            <div className="text-sm uppercase tracking-wider text-gray-500 mb-4">HELP CENTER</div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+              Common questions about reporting
+            </h2>
+          </div>
+
+          {/* Right Side - FAQ Items */}
+          <div className="space-y-4">
+            {/* FAQ 1 */}
+            <div className="border-b border-gray-200 pb-4">
+              <button
+                onClick={() => setOpenFaq(openFaq === 0 ? -1 : 0)}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <span className="text-lg font-semibold text-gray-900">How do I report an issue?</span>
+                {openFaq === 0 ? (
+                  <HiX className="w-5 h-5 text-gray-600" />
+                ) : (
+                  <HiPlus className="w-5 h-5 text-gray-600" />
+                )}
+              </button>
+              {openFaq === 0 && (
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  Simply download our app or visit our website, select the type of issue you want to report, provide location details and a description, and submit. You&apos;ll receive a confirmation and tracking number immediately.
+                </p>
+              )}
+            </div>
+
+            {/* FAQ 2 - Expanded by default */}
+            <div className="border-b border-gray-200 pb-4">
+              <button
+                onClick={() => setOpenFaq(openFaq === 1 ? -1 : 1)}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <span className="text-lg font-semibold text-gray-900">What types of issues can I report?</span>
+                {openFaq === 1 ? (
+                  <HiX className="w-5 h-5 text-gray-600" />
+                ) : (
+                  <HiPlus className="w-5 h-5 text-gray-600" />
+                )}
+              </button>
+              {openFaq === 1 && (
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  You can report potholes, broken streetlights, water leaks, sanitation problems, damaged sidewalks, traffic signal issues, park maintenance needs, and other public infrastructure concerns.
+                </p>
+              )}
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="border-b border-gray-200 pb-4">
+              <button
+                onClick={() => setOpenFaq(openFaq === 2 ? -1 : 2)}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <span className="text-lg font-semibold text-gray-900">How long does it take to resolve an issue?</span>
+                {openFaq === 2 ? (
+                  <HiX className="w-5 h-5 text-gray-600" />
+                ) : (
+                  <HiPlus className="w-5 h-5 text-gray-600" />
+                )}
+              </button>
+              {openFaq === 2 && (
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  Resolution times vary depending on the issue type and severity. Simple fixes like potholes are typically addressed within 48-72 hours, while larger infrastructure projects may take several weeks. You&apos;ll receive status updates throughout the process.
+                </p>
+              )}
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="border-b border-gray-200 pb-4">
+              <button
+                onClick={() => setOpenFaq(openFaq === 3 ? -1 : 3)}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <span className="text-lg font-semibold text-gray-900">Can I track my report status?</span>
+                {openFaq === 3 ? (
+                  <HiX className="w-5 h-5 text-gray-600" />
+                ) : (
+                  <HiPlus className="w-5 h-5 text-gray-600" />
+                )}
+              </button>
+              {openFaq === 3 && (
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  Yes! Once you submit a report, you&apos;ll receive a unique tracking number. You can view real-time updates on your report&apos;s status through our app or website, including when it&apos;s received, assigned, in progress, and resolved.
+                </p>
+              )}
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="border-b border-gray-200 pb-4">
+              <button
+                onClick={() => setOpenFaq(openFaq === 4 ? -1 : 4)}
+                className="w-full flex items-center justify-between text-left"
+              >
+                <span className="text-lg font-semibold text-gray-900">How is my feedback used?</span>
+                {openFaq === 4 ? (
+                  <HiX className="w-5 h-5 text-gray-600" />
+                ) : (
+                  <HiPlus className="w-5 h-5 text-gray-600" />
+                )}
+              </button>
+              {openFaq === 4 && (
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  Your reports help city officials prioritize maintenance work and allocate resources effectively. All reports are compiled into analytics dashboards that help identify patterns, improve response times, and make data-driven decisions to enhance city infrastructure.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#2563eb] py-16 lg:py-24 relative overflow-hidden">
+        {/* Decorative Stars */}
+        <div className="absolute top-8 right-8 lg:top-12 lg:right-12 opacity-20">
+          <div className="relative">
+            <FaStar className="w-16 h-16 text-white absolute top-0 right-0" />
+            <FaStar className="w-12 h-12 text-white absolute -top-2 -right-8 rotate-12" />
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Text Content */}
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                Change the way your{" "}
+                <span className="font-serif italic text-5xl lg:text-6xl font-bold">city</span>{" "}
+                gets maintained
+              </h2>
+              <p className="text-lg text-blue-100 leading-relaxed mb-8">
+                Join thousands of citizens making a real difference. Together, we&apos;re building smarter, cleaner, and safer communities.
+              </p>
+              <button className="bg-white text-[#2563eb] px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
+                Report Now <HiArrowRight />
+              </button>
+            </div>
+
+            {/* Right Side - Visual Element */}
+            <div className="relative flex items-center justify-center">
+              <div className="relative w-full max-w-md">
+                {/* City/Community Illustration */}
+                <div className="grid grid-cols-3 gap-4">
+                  {/* Buildings/Infrastructure Icons */}
+                  <div className="space-y-3">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center">
+                      <FaCity className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center">
+                      <FaTools className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="space-y-3 pt-8">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center">
+                      <FaGlobe className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center">
+                      <HiUsers className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center">
+                      <FaStar className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center">
+                      <HiChartBar className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-200">
+        {/* Upper Footer Section */}
+        <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
+            {/* Column 1 - Citizen */}
+            <div>
+              <h3 className="text-base font-bold text-gray-900 mb-4">Citizen</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    My Reports
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Notifications
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Community
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Leaderboard
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Settings
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2 - Support */}
+            <div>
+              <h3 className="text-base font-bold text-gray-900 mb-4">Support</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Report Guidelines
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Troubleshooting
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3 - City */}
+            <div>
+              <h3 className="text-base font-bold text-gray-900 mb-4">City</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Statistics
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Map View
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Announcements
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4 - Organization */}
+            <div>
+              <h3 className="text-base font-bold text-gray-900 mb-4">Organization</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    About Portal
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Policies
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-[#2563eb] transition-colors">
+                    Careers
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Right Side - Logo, Address, Language */}
+            <div className="md:col-span-1 lg:col-span-1">
+              <div className="text-3xl font-bold text-[#2563eb] mb-6">Sudhaar</div>
+              <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                City Hall Civic Center<br />
+                Municipal Office Building<br />
+                Suite 202<br />
+                Your City, State 12345
+              </p>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <span className="text-base">🇬🇧</span>
+                <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Separator */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* Bottom Footer Section */}
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <div className="text-sm text-gray-600">
+              © {new Date().getFullYear()} Sudhaar Municipal Government. All rights reserved.
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap gap-6">
+              <a href="#" className="text-sm text-gray-600 hover:text-[#2563eb] transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-[#2563eb] transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-sm text-gray-600 hover:text-[#2563eb] transition-colors">
+                Data Protection
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
